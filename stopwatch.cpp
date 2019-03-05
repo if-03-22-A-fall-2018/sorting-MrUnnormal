@@ -10,3 +10,19 @@
  * <your description here>
  *-----------------------------------------------------------------------------
 */
+#include "stopwatch.h"
+
+void 	start_stopwatch ()
+{
+
+}
+
+void 	stop_stopwatch ()
+{
+
+}
+
+float 	elapsed_time ()
+{
+  
+}

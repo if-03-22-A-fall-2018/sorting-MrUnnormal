@@ -21,5 +21,10 @@
 *** to initialize an array with a number of random elements.
 */
 
+void 	init_random (int *array, unsigned long length);
+
+void 	bubble_sort (int *array, unsigned long length);
+
+void 	insertion_sort (int *array, unsigned long length);
 
 #endif
