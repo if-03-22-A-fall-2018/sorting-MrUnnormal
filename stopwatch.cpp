@@ -33,5 +33,5 @@ float 	elapsed_time ()
   {
     stop_stopwatch();
   }
-  return float(start - end) / CLOCKS_PER_SEC;
+  return float(end - start) / CLOCKS_PER_SEC;
 }
