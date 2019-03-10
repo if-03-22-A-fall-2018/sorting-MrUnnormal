@@ -33,6 +33,36 @@
 #define VERY_SMALL		1024	// 2^10
 #define TINY			256 	// 2 ^8
 
+int* clone_array(int* huge_Array, int* other_array, unsigned long length);
+
+int main(int argc, char const *argv[])
+{
+  int huge[HUGE];
+  int very_large[VERY_LARGE];
+  int large[LARGE];
+  int middle[MIDDLE];
+  int small[SMALL];
+  int very_small[VERY_SMALL];
+  int tiny[TINY];
+
+  init_random(huge, HUGE);
+  clone_array(huge, very_large, VERY_LARGE);
+  clone_array(huge, large, LARGE);
+  clone_array(huge, middle, MIDDLE);
+  clone_array(huge, small, SMALL);
+  clone_array(huge, very_small, VERY_SMALL);
+  clone_array(huge, tiny, TINY);
+  return 0;
+}
+
+int* clone_array(int* huge_Array, int* other_array, unsigned long length)
+{
+  for(unsigned long i = 0; i < length; i++)
+  {
+    other_array[i] = huge_Array[i];
+  }
+  return other_array;
+}
 /*
 * Suggestion how to initialize the arrays which must be sorted with test data.
 * 1. Create a array of size HUGE and initialize it with random data.

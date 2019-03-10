@@ -13,7 +13,7 @@
 #include "sorting_algorithms.h"
 #include <stdlib.h>
 
-void 	init_random (int *array, unsigned long length)
+void 	init_random (int* array, unsigned long length)
 {
   for(unsigned long i = 0; i < length; i++)
   {
