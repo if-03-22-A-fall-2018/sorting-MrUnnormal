@@ -52,16 +52,24 @@ int main(int argc, char const *argv[])
   clone_array(huge, small, SMALL);
   clone_array(huge, very_small, VERY_SMALL);
   clone_array(huge, tiny, TINY);
+
+  start_stopwatch();
+  bubble_sort(huge, HUGE);
+  int diff_huge_bubble = elapsed_time();
+  
+  init_random(huge, HUGE);
+
+  start_stopwatch();
+  insertion_sort(huge, HUGE);
+  int diff_huge_inst = elapsed_time();
+  printf("%f BUBBLE \n", diff_huge_bubble);
+  printf("%f INST \n", diff_huge_inst);
   return 0;
 }
 
 int* clone_array(int* huge_Array, int* other_array, unsigned long length)
 {
-  for(unsigned long i = 0; i < length; i++)
-  {
-    other_array[i] = huge_Array[i];
-  }
-  return other_array;
+  return (int*) memcpy(huge_Array, other_array, length);
 }
 /*
 * Suggestion how to initialize the arrays which must be sorted with test data.
